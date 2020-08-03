@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	float fq, sq, tq, m, n, a, t;
+	cout << "===============Quizzs==============" << endl;
+	cout << "Enter first quizz (10) : ";
+	cin >> fq;
+	cout << "Enter second quizz (10) : ";
+	cin >> sq;
+	cout << "Enter third quizz (10) : ";
+	cin >> tq;
+	cout << "===============MID-TERM============" << endl;
+	cout << "Enter mid-term (40) : ";
+	cin >> m;
+	cout << "===============FINAL===============" << endl;
+	cout << "Enter final (50) : ";
+	cin >> n;
+	a = ((fq + sq + tq) / 3);
+	cout << "Quizz total : " << a << endl;
+	cout << "Mid term : " << m << endl;
+	cout << "Final : " << n << endl;
+	t = (a + m + n);
+	cout << "Total : " << t << endl;
+	cout << "Your score is" << (t >= 50 ? "PASS" : "FALL") << endl;
+	return(0);
+}
