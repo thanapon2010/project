@@ -1,0 +1,36 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+void display(int salary[],int num);
+int cal_bonus(int b);
+int main()
+{
+	int num;
+	cout << "Enter Number of person : ";
+    cin >> num;
+	int *salary=new int[num]; // dynamic memory
+	for(int i = 0;i<num;i++)
+	{
+		cout << "Enter the salary"<< i+1 << " : ";
+		cin >> salary[i];
+	}
+	cout <<setfill('-')<<setw(50)<<"\n";
+	cout << "There are "<< num <<" persons."<<endl;
+	display(salary,num);
+	cout <<setfill('-')<<setw(50)<<"\n";
+	return 0;
+}
+void display(int salary[],int num)
+{
+	int b = 0;
+	for(int x = 0;x<num;x++)
+	{
+		b = cal_bonus(salary[x]);
+		cout<<"The Salary for person "<<x+1<<" = "<<salary[x]<<"and Bonus "<<" = "<<b<<endl;
+	}
+}
+int cal_bonus(int b)
+{
+	b = b*2;
+	return b;
+}
